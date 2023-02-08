@@ -15,4 +15,6 @@ fun main(){
 
     val b2: Byte = 0 // OK, literals are checked statically
     println(b2)
+
+    println(5/2)
 }
