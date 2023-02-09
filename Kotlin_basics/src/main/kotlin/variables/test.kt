@@ -15,6 +15,7 @@ fun main() {
 
     var message: String? = "I’m learning Kotlin!"
     message = null
+    message = "30"
     println(message?.toString())
 
 }
