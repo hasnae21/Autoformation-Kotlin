@@ -7,11 +7,11 @@ fun main() {
         for (j in 1..nbr_enter - i) {
             print(" ")
         }
-        print("_")
+        print(" ")
         for (j in 1..(2 * i - 1)) {
             print("*")
         }
-        print("_")
+        print(" ")
         println()
     }
 
