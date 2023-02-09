@@ -1,7 +1,7 @@
 fun main() {
     print("Entrer le nombre de ligne voulu: ")
 
-    val nbr_enter = readLine()!!.toInt()
+    val nbr_enter = readLine()!!
     println("vous avez entrer $nbr_enter")
 
     for (i in 1..nbr_enter) {
