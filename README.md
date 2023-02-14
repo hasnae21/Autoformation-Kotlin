@@ -19,9 +19,8 @@
 > The when statement is Kotlin's version of the switch statement, but when is more flexible.
 
 
-# Answer these questions
+### Answer these questions
 
-## Question 1
 Which of the following declares an unchangeable list of strings?
 >> ▢ val school = arrayOf("shark", "salmon", "minnow")
 
@@ -31,7 +30,6 @@ Which of the following declares an unchangeable list of strings?
 
 >> ▢ val school = mutableListOf("shark", "salmon", "minnow")
 
-## Question 2
 What will be the output of the following code? for (i in 3..8 step 2) print(i)
 >> ▢ 345678
 
@@ -41,7 +39,6 @@ What will be the output of the following code? for (i in 3..8 step 2) print(i)
 
 >>  /▢ 357
 
-## Question 3
 What is the purpose of the question mark in this code? var rocks: Int? = 3
 >> ▢ The type of the variable rocks isn't fixed.
 
