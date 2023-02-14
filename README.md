@@ -45,8 +45,8 @@ What will be the output of the following code? for (i in 3..8 step 2) print(i)
 What is the purpose of the question mark in this code? var rocks: Int? = 3
 >> ▢ The type of the variable rocks isn't fixed.
 
->> ▢ The variable rocks can be set to null.
+>> /▢ The variable rocks can be set to null.
 
->> /▢ The variable rocks cannot be set to null.
+>> ▢ The variable rocks cannot be set to null.
 
 >> ▢ The variable rocks shouldn't be initialized right away.
