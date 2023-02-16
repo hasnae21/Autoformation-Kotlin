@@ -1,3 +1,5 @@
+package Exercice3
+
 class Produit(
     val name: String,
     val prix: Int,
