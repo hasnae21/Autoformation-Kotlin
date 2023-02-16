@@ -1,7 +1,11 @@
 class Produit(
     val name: String,
     val prix: Int,
-    val categorie: String
 ){
+
+    init {
+        println("le nom du produit est $name")
+        println("le prix du produit est $prix")
+    }
 
 }
