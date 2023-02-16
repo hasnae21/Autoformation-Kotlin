@@ -24,8 +24,6 @@ class InitOrderDemo(
 
 
 
-
-
 //class Person constructor(firstName: String){ /*...*/ }
 
 //class Person(
