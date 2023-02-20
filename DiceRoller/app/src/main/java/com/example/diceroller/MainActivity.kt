@@ -6,37 +6,34 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val rollButton: Button = findViewById(R.id.button)  //find button by it's id
+        rollButton.setOnClickListener {     //onClick event
 
-        val rollButton: Button = findViewById(R.id.button)  //button
+        Toast.makeText(this, "dé lancer!", Toast.LENGTH_SHORT).show()  //validation button
 
-        rollButton.setOnClickListener {
+        //val resultTextView: TextView = findViewById(R.id.textView)  //find TextView by it's id
+        //resultTextView.text = "6"  //afficher le text entre ""
 
-            Toast.makeText(this, "Bien jouer!", Toast.LENGTH_SHORT).show()  //validation on click
-
-
-//            val resultTextView: TextView = findViewById(R.id.textView)
-//            resultTextView.text = "6"
-
-            rollDice()  // appel de fct
+        rollDice()  // appel de fct rollDice
 
         }
     }
 
     private fun rollDice() {
-        val dice = Dice(6)
+        val dice = Dice(6)  // appel de class Dice()
 
-        val diceRoll = dice.roll()
+        val diceRoll = dice.roll()   // appel de fct roll()  //dice Roller is an Int
 
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = diceRoll.toString()
+        val resultTextView: TextView = findViewById(R.id.textView)  //find TextView by it's id
+        resultTextView.text = diceRoll.toString()  //afficher le text String entre ""
     }
+
 }
 
 class Dice(private val numSides: Int) {
