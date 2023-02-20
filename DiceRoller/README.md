@@ -1,11 +1,11 @@
-// 
+## Exercice d'application 
 > Ajouter un Button à une application Android
 > Ajouter un comportement déclenché lorsque l'utilisateur appuie sur un Button dans l'application
 > Ouvrir et modifier le code Activity d'une application
 > Comment afficher un message Toast
 > Mettre à jour le contenu d'un TextView pendant l'exécution de l'application
 
-// Solution:
+## Solution:
 >> Ajoutez un élément Button dans une application Android à l'aide de l'éditeur de mise en page.
 >> Modifiez la classe MainActivity.kt pour ajouter un comportement interactif à l'application.
 >> Affichez un message Toast comme solution temporaire pour vérifier que vous êtes sur la bonne voie.
@@ -13,3 +13,7 @@
 >> Lorsque l'application est en cours d'exécution, vous pouvez mettre à jour ce qui s'affiche à l'écran en appelant des méthodes sur TextView, Button ou d'autres éléments d'UI dans la mise en page.
 >> Commentez votre code pour aider les personnes qui le liront à comprendre votre approche.
 Reformatez votre code et nettoyez-le.
+
+# Resume
+>> Vous avez utilisé setImageResource() pour modifier l'image affichée dans une ImageView.
+>> Vous avez utilisé des instructions de structure de contrôle, comme les expressions if / else ou when, pour gérer différents cas de figure dans votre application (par exemple, pour afficher différentes images en fonction de différentes circonstances).
