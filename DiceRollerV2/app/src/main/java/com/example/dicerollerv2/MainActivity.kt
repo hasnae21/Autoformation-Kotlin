@@ -4,9 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import com.example.dicerollerv2.R.id.imageView
-import com.example.dicerollerv2.R.id.textView
+import com.example.dicerollerv2.R.id.imageView2
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,20 +18,12 @@ class MainActivity : AppCompatActivity() {
         rollDice()
     }
 
-
-    /**
-     * Roll the dice and update the screen with the result.
-     */
     private fun rollDice() {
+
         val dice = Dice(6)
         val diceRoll = dice.roll()
 
-      val resultTextView: TextView = findViewById(textView)
-      resultTextView.text = diceRoll.toString()
-
-       val diceImage: ImageView = findViewById(imageView)
-
-        
+        val diceImage: ImageView = findViewById(imageView)
         val drawableResource = when (diceRoll) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -41,12 +32,25 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
         diceImage.setImageResource(drawableResource)
         diceImage.contentDescription = diceRoll.toString()
 
-    }
+        val dice1 = Dice(6)
+        val diceRoll1 = dice1.roll()
 
+        val diceImage1: ImageView = findViewById(imageView2)
+        val drawableResource1 = when (diceRoll1) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+        diceImage1.setImageResource(drawableResource1)
+        diceImage1.contentDescription = diceRoll1.toString()
+
+    }
 }
 
 class Dice(private val numSides: Int) {
