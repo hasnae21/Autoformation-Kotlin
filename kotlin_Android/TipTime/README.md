@@ -18,6 +18,15 @@ Multi-line comment -->
 > This indicates that the file is an XML file, but not every XML file includes this.  
 <?xml version="1.0" encoding="utf-8"?>
 
+> // Old way with findViewById()
+val myButton: Button = findViewById(R.id.my_button)
+myButton.text = "A button"
+// Better way with view binding
+val myButton: Button = binding.myButton
+myButton.text = "A button"
+// Best way with view binding and no extra variable
+binding.myButton.text = "A button"
+
 
 # Summary
 > XML (Extensible Markup Language) is a way of organizing text, made of tags, elements, and attributes.
@@ -33,3 +42,16 @@ Multi-line comment -->
 > Use "start" and "end" constraints to handle both Left to Right (LTR) and Right to Left (RTL) languages.
 > Names of the constraint attributes follow the form layout_constraint<Source>_to<Target>Of.
 > To make a View as wide as the ConstraintLayout it's in, constrain the start and end to the start and end of the parent, and set the width to 0dp.
+
+> View binding lets you more easily write code that interacts with the UI elements in your app.
+> The Double data type in Kotlin can store a decimal number.
+> Use the checkedRadioButtonId attribute of a RadioGroup to find which RadioButton is selected.
+> Use NumberFormat.getCurrencyInstance() to get a formatter to use for formatting numbers as currency.
+> You can use string parameters like %s to create dynamic strings that can still be easily translated into other languages.
+> Testing is important!
+> You can use Logcat in Android Studio to troubleshoot problems like the app crashing.
+> A stack trace shows a list of methods that were called. This can be useful if the code generates an exception.
+> Exceptions indicate a problem that code didn't expect.
+> Null means "no value."
+> Not all code can handle null values, so be careful using it.
+> Use Analyze > Inspect Code for suggestions to improve your code.

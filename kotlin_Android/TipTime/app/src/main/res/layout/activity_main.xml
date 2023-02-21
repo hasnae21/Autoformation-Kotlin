@@ -26,6 +26,7 @@
         android:text="How was the service?"
         />
 
+
     <RadioGroup
         android:id="@+id/tip_options"
         android:layout_width="wrap_content"
@@ -56,7 +57,7 @@
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="Round up tip?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tip_options"
@@ -79,5 +80,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        android:text="Tip Amount" />
+        android:text="@string/tip_amount"
+        tools:text="Tip Amount: $10"/>
+
 </android.support.constraint.ConstraintLayout>
