@@ -1,21 +1,21 @@
-import java.util.*
-
-fun feedTheFish() {
-    val day = randomDay()
-    val food = "pellets"
-    println ("Today is $day and the fish eat $food")
-}
-
-fun randomDay() : String {
-    val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday",
-        "Friday", "Saturday", "Sunday")
-    return week[Random().nextInt(week.size)]
-}
-
-fun main(args: Array<String>) {
-    feedTheFish()
-    randomDay()
-}
+//import java.util.*
+//
+//fun feedTheFish() {
+//    val day = randomDay()
+//    val food = "pellets"
+//    println ("Today is $day and the fish eat $food")
+//}
+//
+//fun randomDay() : String {
+//    val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday",
+//        "Friday", "Saturday", "Sunday")
+//    return week[Random().nextInt(week.size)]
+//}
+//
+//fun main(args: Array<String>) {
+//    feedTheFish()
+//    randomDay()
+//}
 
 
 
@@ -75,3 +75,10 @@ fun main(args: Array<String>) {
 //fun main(args: Array<String>) {
 //    feedTheFish()
 //}
+
+
+//    inline fun repeat(times: Int, action: (Int) -> Unit)
+//    repeat(3) {
+//        println("Hello")
+//    }
+
