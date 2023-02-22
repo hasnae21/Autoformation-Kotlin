@@ -1,8 +1,6 @@
 # Summary
 > Kotlin is similar to other object-oriented programming languages.
-
 > Install the latest JDK for your operating system to use Kotlin.
-
 > Install the IntelliJ IDEA to work with Kotlin.
 
 ### The following features may be different in Kotlin than what you're used to in other languages:
