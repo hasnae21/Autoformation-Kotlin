@@ -4,6 +4,7 @@
 ### RadioButton - a selectable radio button for each tip option
 ### RadioGroup - to group the radio button options
 ### Switch - an on/off toggle for choosing whether to round up the tip or not
+### RecyclerView
 
 https://developer.android.com/static/codelabs/basic-android-kotlin-training-xml-layouts/img/8dea708333aebabe_960.png
 
