@@ -8,9 +8,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/add_task_button"
-        android:layout_width="382dp"
-        android:layout_height="44dp"
+        android:id="@+id/add_button"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
         android:background="#4CAF50"
         android:text="Add Item"
         android:textColor="#FFFFFF"
@@ -18,15 +19,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_task_name"
-        app:layout_constraintVertical_bias="0.768" />
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/new_task_name"
-        android:layout_width="376dp"
-        android:layout_height="41dp"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Task Name"
         android:inputType="textPersonName"
@@ -34,17 +35,17 @@
         android:textColorHighlight="#000000"
         android:textColorHint="#535353"
         android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_task_desc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.18" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/new_task_desc"
-        android:layout_width="376dp"
-        android:layout_height="41dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Task Description"
         android:inputType="textPersonName"
@@ -52,33 +53,33 @@
         android:textColorHighlight="#000000"
         android:textColorHint="#535353"
         android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.445" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <View
         android:id="@+id/divider"
-        android:layout_width="400dp"
-        android:layout_height="3dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="48dp"
         android:background="#4AA84D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintBottom_toTopOf="@+id/new_task_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:ignore="MissingConstraints" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -5,23 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <EditText
-        android:id="@+id/editTask"
-        android:layout_width="361dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="284dp"
+        android:id="@+id/editTask_name"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="188dp"
         android:ems="10"
         android:hint="New Task"
         android:inputType="textPersonName"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editTask_desc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTask_desc"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="92dp"
+        android:ems="10"
+        android:hint="New Desc"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/update_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/update_button"
-        android:layout_width="382dp"
-        android:layout_height="44dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="260dp"
         android:background="#FFEB3B"
         android:text="UPDATE"
         android:textColor="#000000"
@@ -29,8 +50,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTask"
-        app:layout_constraintVertical_bias="0.061" />
+        tools:ignore="TouchTargetSizeCheck" />
+
 </android.support.constraint.ConstraintLayout>
