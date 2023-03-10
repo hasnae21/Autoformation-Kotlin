@@ -51,6 +51,7 @@ class ItemAdapter(
             datasource.tasks.removeAt(position)
             this.notifyItemRemoved(position)
 
+            // Toast validator
             Toast.makeText(context, "Task Deleted", Toast.LENGTH_SHORT).show()
         }
 
@@ -77,6 +78,7 @@ class ItemAdapter(
 
                 dialog.cancel()
 
+                // Toast validator
                 Toast.makeText(context, "Task Updated", Toast.LENGTH_SHORT).show()
             }
 
