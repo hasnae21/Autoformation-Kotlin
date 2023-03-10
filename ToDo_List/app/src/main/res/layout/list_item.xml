@@ -4,35 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="40dp">
+    android:padding="10dp"
+    android:translationY="20dp">
 
     <TextView
         android:id="@+id/list_item"
-        android:layout_width="331dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:textSize="25dp" />
+        android:textSize="12sp"
+        android:translationX="45dp" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/delete_button"
         android:layout_width="43dp"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:layout_gravity="end"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_baseline_delete_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_baseline_delete_24" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/edit_button"
         android:layout_width="42dp"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:layout_gravity="start"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_baseline_edit_note_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_baseline_edit_note_24" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
 </FrameLayout>

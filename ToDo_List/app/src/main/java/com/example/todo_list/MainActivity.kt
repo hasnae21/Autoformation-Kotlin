@@ -17,28 +17,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //
+        // class Datasource()
         val datasource: Datasource = Datasource()
 
+
         // DOM elements
-        val createButton: Button = findViewById(R.id.add_button)
         val recyclerView = findViewById<RecyclerView>(R.id.list_view)
+        val createButton: Button = findViewById(R.id.add_button)
+
 
         //
         recyclerView.adapter = ItemAdapter(this, datasource)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+
         // onclick event
         createButton.setOnClickListener{
 
+            // DOM elements
             val taskName: String = findViewById<EditText>(R.id.new_task_name).text.toString()
 
+            // call fun add from Datasource() class
             datasource.add(taskName)
 
+            // Toast validator
             Toast.makeText(this, "Task Added", Toast.LENGTH_SHORT).show()
 
+            // notifyDataSetChanged()
             recyclerView.adapter?.notifyDataSetChanged()
         }
     }
-
 }

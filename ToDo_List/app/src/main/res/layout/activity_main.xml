@@ -7,79 +7,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
-        android:background="#4CAF50"
-        android:text="Add Item"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/new_task_name"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Task Name"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#535353"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/new_task_desc"
+        <View
+            android:id="@+id/divider"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="28dp"
+            android:background="#4AA84D" />
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="32dp"
+            android:background="#4CAF50"
+            android:text="Add Item"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/new_task_name"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Task Name"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#535353"
+            android:textColorLink="#000000"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/new_task_desc"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Task Description"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#535353"
+            android:textColorLink="#000000"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="379dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/new_task_desc"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Task Description"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHighlight="#000000"
-        android:textColorHint="#535353"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/add_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginBottom="48dp"
-        android:background="#4AA84D"
-        app:layout_constraintBottom_toTopOf="@+id/new_task_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list_view"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:scrollbars="vertical"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -21,28 +21,29 @@ class ItemAdapter(
         private val view: View
         ) : RecyclerView.ViewHolder(view) {
 
-
         // DOM elements
         val textView: TextView = view.findViewById(R.id.list_item)
-        val editButton: ImageView = view.findViewById(R.id.edit_button)
-        val deleteButton: ImageView = view.findViewById(R.id.delete_button)
-
+        val editButton: ImageButton = view.findViewById(R.id.edit_button)
+        val deleteButton: ImageButton = view.findViewById(R.id.delete_button)
     }
 
+
+    // onCreateViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_item, parent, false)
+
+        // navigate to list_item.xml layout
+        val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         return ItemViewHolder(adapterLayout)
     }
+    /////////////////////
 
     @SuppressLint("MissingInflatedId")
 
+    // onBindViewHolder
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val task = datasource.tasks[position]
-
         holder.textView.text = task.name
-
 
         // onclick event
         holder.deleteButton.setOnClickListener {
@@ -52,7 +53,6 @@ class ItemAdapter(
 
             Toast.makeText(context, "Task Deleted", Toast.LENGTH_SHORT).show()
         }
-
 
         // onclick event
         holder.editButton.setOnClickListener {
@@ -85,6 +85,8 @@ class ItemAdapter(
             dialog.show()
         }
     }
+    //////////////////////////
+
 
     override fun getItemCount(): Int = datasource.tasks.size
 
