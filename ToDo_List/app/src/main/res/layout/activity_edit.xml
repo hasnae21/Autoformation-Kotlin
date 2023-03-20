@@ -3,47 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="visible">
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="50dp">
 
 
     <EditText
         android:id="@+id/editTask_name"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="New Task"
         android:inputType="textPersonName"
-        android:textColor="#000000"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/editTask_desc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTask_desc"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="92dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="New Desc"
         android:inputType="textPersonName"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/update_button"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTask_dueTime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <EditText
+        android:id="@+id/editTask_dueTime"
+        android:layout_width="251dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/update_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/update_button"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="260dp"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
         android:background="#FFEB3B"
         android:text="UPDATE"
         android:textColor="#000000"
@@ -51,8 +60,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
+
 
 </android.support.constraint.ConstraintLayout>

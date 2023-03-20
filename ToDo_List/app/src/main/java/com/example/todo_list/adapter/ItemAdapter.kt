@@ -22,7 +22,10 @@ class ItemAdapter(
         ) : RecyclerView.ViewHolder(view) {
 
         // DOM elements
-        val textView: TextView = view.findViewById(R.id.list_item)
+        val textViewName: TextView = view.findViewById(R.id.list_item)
+        val textViewDesc: TextView = view.findViewById(R.id.list_item_desc)
+        val textViewTime: TextView = view.findViewById(R.id.list_item_dueTime)
+
         val editButton: ImageButton = view.findViewById(R.id.edit_button)
         val deleteButton: ImageButton = view.findViewById(R.id.delete_button)
     }
@@ -43,9 +46,13 @@ class ItemAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val task = datasource.tasks[position]
-        holder.textView.text = task.name
+        holder.textViewName.text = task.name
+        holder.textViewDesc.text = task.desc
+        holder.textViewTime.text = task.dueTime.toString()
 
-        // onclick event
+
+
+        // onclick event Delete
         holder.deleteButton.setOnClickListener {
 
             datasource.tasks.removeAt(position)
@@ -55,7 +62,8 @@ class ItemAdapter(
             Toast.makeText(context, "Task Deleted", Toast.LENGTH_SHORT).show()
         }
 
-        // onclick event
+
+        // onclick event Update
         holder.editButton.setOnClickListener {
 
             val dialog = Dialog(context)
@@ -66,14 +74,20 @@ class ItemAdapter(
 
             // DOM elements
             val updateButton: Button = view.findViewById(R.id.update_button)
-            val titleInput: EditText = view.findViewById(R.id.editTask_name)
+            val Input1: EditText = view.findViewById(R.id.editTask_name)
+            val Input2: EditText = view.findViewById(R.id.editTask_desc)
 
 
-            titleInput.setText(task.name)
+
+            Input1.setText(task.name)
+            Input2.setText(task.desc)
+
 
             // onclick event
             updateButton.setOnClickListener {
-                task.name = titleInput.text.toString()
+                task.name = Input1.text.toString()
+                task.desc = Input2.text.toString()
+
                 this.notifyItemChanged(position)
 
                 dialog.cancel()

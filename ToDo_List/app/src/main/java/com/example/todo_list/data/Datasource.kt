@@ -1,6 +1,5 @@
 package com.example.todo_list.data
 
-import com.example.todo_list.enum.STATUS
 import com.example.todo_list.model.Task
 
 class Datasource {
@@ -10,10 +9,10 @@ class Datasource {
 
 
 // add function
-    fun add(name: String, status: STATUS = STATUS.WAITING){
+    fun add(name: String, desc: String, dueTime: String){
 
         // task object of Task class
-        val task = Task(name, status)
+        val task = Task(name,desc,dueTime)
 
         // add a task to tasks list
         this.tasks.add(task)

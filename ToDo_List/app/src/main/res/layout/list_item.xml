@@ -4,15 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:translationY="20dp">
+    android:paddingBottom="10dp">
 
     <TextView
         android:id="@+id/list_item"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:textSize="12sp"
-        android:translationX="45dp" />
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:translationX="50dp"
+        android:translationY="2dp" />
+
+    <TextView
+        android:id="@+id/list_item_desc"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:translationX="50dp"
+        android:translationY="30dp" />
+
+    <TextView
+        android:id="@+id/list_item_dueTime"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:translationX="255dp"
+        android:translationY="9dp" />
 
     <ImageButton
         android:id="@+id/delete_button"
