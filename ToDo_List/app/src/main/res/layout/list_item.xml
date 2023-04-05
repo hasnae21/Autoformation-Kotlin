@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/list_item"
-        android:layout_width="205dp"
+        android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -25,10 +25,10 @@
 
     <TextView
         android:id="@+id/list_item_dueTime"
-        android:layout_width="107dp"
+        android:layout_width="141dp"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        android:translationX="255dp"
+        android:translationX="220dp"
         android:translationY="9dp" />
 
     <ImageButton

@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Ti
     private fun pickDate(){
         val btn_timePicker: Button = findViewById(R.id.btn_timePicker)
         btn_timePicker.setOnClickListener{
+            //adb logcat "eglCodecCommon:S"
 
             //
             getDateTimeCalendar()
             DatePickerDialog(this, this, year, month, day).show()
         }
     }
-
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         savedDay = dayOfMonth
         savedMonth = month
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Ti
 
         //
         val new_task_dueTime = findViewById<TextView>(R.id.new_task_dueTime)
-        new_task_dueTime.setText("$savedDay-$savedMonth-$savedYear\n Hour: $savedHour Minute: $savedMinute")
+        new_task_dueTime.setText("$savedDay-$savedMonth-$savedYear\n $savedHour heur $savedMinute min")
     }
 
 
