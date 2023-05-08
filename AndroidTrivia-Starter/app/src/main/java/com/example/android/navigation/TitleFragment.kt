@@ -22,4 +22,5 @@ class TitleFragment : Fragment() {
             R.layout.fragment_title,container,false)
         return binding.root
     }
+
 }
