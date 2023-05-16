@@ -34,8 +34,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         recyclerView = binding.recyclerView
+
         // Sets the LinearLayoutManager of the recyclerview
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        //LetterAdapter est utilisé par RecyclerView dans MainActivity
         recyclerView.adapter = LetterAdapter()
     }
 

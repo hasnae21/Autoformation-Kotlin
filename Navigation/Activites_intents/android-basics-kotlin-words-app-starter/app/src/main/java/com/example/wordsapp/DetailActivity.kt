@@ -40,6 +40,8 @@ class DetailActivity : AppCompatActivity() {
 
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        // WordAdapter est utilisé par RecyclerView dans DetailActivity
         recyclerView.adapter = WordAdapter(letterId, this)
 
         // Adds a [DividerItemDecoration] between items
