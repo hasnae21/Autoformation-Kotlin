@@ -1,9 +1,9 @@
-## Les Lists
+# Les Lists
 	- les listes comportent de nombreuses fonctions intégrées
 	- un autre type de collection en Kotlin est un *ensemble*
 	- Les valeurs d'une *map* peuvent être des chaînes, des nombres ou des objets
 
-### Function 
+## Functions 
 #### sorted() : renvoie une copie de la liste triée par ordre croissant
 #### toSet() : pour convertir la liste en un ensemble, sans doublons
 #### contains() : si un élément particulier se trouve ou non dans l'ensemble
@@ -23,6 +23,8 @@
 
 > 
 fun main() {
+
+
     val numbers = listOf(0, 3, 8, 4, 0, 5, 5, 8, 9, 2)
     println("list:   ${numbers}")
     
