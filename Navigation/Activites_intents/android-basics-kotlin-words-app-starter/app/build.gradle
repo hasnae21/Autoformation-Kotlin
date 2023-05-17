@@ -57,4 +57,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation 'androidx.mediarouter:mediarouter:1.4.0'
 }
