@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         menuItem.icon =
             if (isLinearLayoutManager)
                 ContextCompat.getDrawable(this, R.drawable.ic_grid_layout)
-            else ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
+            else ContextCompat.getDrawable(this, R.drawable.ic_linear_layout_list)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
