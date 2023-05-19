@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.cycle_activity_test'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.cycle_activity_test"
         minSdk 19
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

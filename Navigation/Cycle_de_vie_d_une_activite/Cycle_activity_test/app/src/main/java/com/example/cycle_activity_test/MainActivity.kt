@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, "onCreate Called")
     }
-
 //        override fun onCreate(savedInstanceState: Bundle?) {
 //            super.onCreate()
 //            Log.d(TAG, "onCreate Called")
@@ -49,7 +48,4 @@ class MainActivity : AppCompatActivity() {
             super.onRestart()
             Log.d(TAG, "onRestart Called")
         }
-
-
 }
-
