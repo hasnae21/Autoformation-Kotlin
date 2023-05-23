@@ -1,6 +1,5 @@
 # Les fragments et le composant Navigation
 
-
 > *graphique de navigation* pour naviguer entre les fragments d'une même activité hôte
 
 > __Un fragment__
@@ -12,3 +11,5 @@ https://developer.android.com/static/codelabs/basic-android-kotlin-training-frag
 > __NavHost__ : un élément NavHost permet d'afficher les destinations à partir d'un graphique de navigation au sein d'une activité. Lorsque vous naviguez entre des fragments, la destination affichée dans __NavHost__ est *mise à jour.*
 
 > __NavController__ : l'objet NavController vous permet de contrôler la navigation entre les destinations affichées dans __NavHost__. Lorsque vous avez utilisé des intents, vous avez appelé la fonction __startActivity__ pour accéder à un nouvel écran. Avec le composant Navigation, vous pouvez appeler la méthode __navigate()__ de NavController pour permuter le fragment affiché. NavController vous aide également à gérer des tâches courantes, comme répondre au bouton "up" (haut) du système pour revenir au fragment précédemment affiché.
+
+> Le graphique de navigation (ou __NavGraph__): est un mappage virtuel de la navigation dans votre application. Chaque écran ou, dans votre cas, *chaque fragment*, deviendra une *"destination"* à laquelle il sera possible d'accéder. Un *NavGraph peut être représenté par un fichier XML qui montre comment les destinations sont liées*.
