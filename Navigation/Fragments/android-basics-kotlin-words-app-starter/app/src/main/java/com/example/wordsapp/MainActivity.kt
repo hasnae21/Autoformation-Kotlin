@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//        Vous utiliserez une implémentation intégrée, appelée NavHostFragment
+
+
+
 //        recyclerView = binding.recyclerView
 //
 //        // recyclerView.layoutManager = LinearLayoutManager(this)

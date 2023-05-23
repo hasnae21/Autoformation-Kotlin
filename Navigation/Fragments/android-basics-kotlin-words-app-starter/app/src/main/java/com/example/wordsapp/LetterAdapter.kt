@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class LetterAdapter :
     RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
+
     // Generates a [CharRange] from 'A' to 'Z' and converts it to a list
     private val list = ('A').rangeTo('Z').toList()
 
@@ -44,9 +45,9 @@ class LetterAdapter :
             // Le nom de l'activité que vous souhaitez afficher est:  DetailActivity::class.java
             val intent = Intent(context, DetailActivity::class.java)
             // intent.putExtra("letter", holder.button.text.toString())
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            // intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            intent.putExtra(WordListFragment.LETTER, holder.button.text.toString())
             context.startActivity(intent)
-
         }
     }
 
