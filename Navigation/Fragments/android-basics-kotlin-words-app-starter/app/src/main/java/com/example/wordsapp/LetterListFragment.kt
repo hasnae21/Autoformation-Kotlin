@@ -14,15 +14,40 @@ class LetterListFragment : Fragment() {
 
     private var _binding: FragmentLetterListBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var recyclerView: RecyclerView
+
+    private var isLinearLayoutManager = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setHasOptionsMenu(true)
     }
 
-    private var isLinearLayoutManager = true
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        _binding = FragmentLetterListBinding.inflate(inflater, container, false)
+        return binding.root
+
+//        return view
+    }
+
+    override fun onViewCreated(view: View,savedInstanceState: Bundle?) {
+        recyclerView = binding.recyclerView
+
+        chooseLayout()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.layout_menu, menu)
+        val layoutButton = menu.findItem(R.id.action_switch_layout)
+
+        setIcon(layoutButton)
+    }
 
     //function chooseLayout() setIcon() onOptionsItemSelected()
     private fun chooseLayout() {
@@ -47,12 +72,6 @@ class LetterListFragment : Fragment() {
             else ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_linear_layout)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.layout_menu, menu)
-        val layoutButton = menu.findItem(R.id.action_switch_layout)
-
-        setIcon(layoutButton)
-    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -66,22 +85,6 @@ class LetterListFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentLetterListBinding.inflate(inflater, container, false)
-        return binding.root
 
-//        return view
-    }
-
-    override fun onViewCreated(view: View,savedInstanceState: Bundle?) {
-        recyclerView = binding.recyclerView
-
-        chooseLayout()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 }

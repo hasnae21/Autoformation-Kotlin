@@ -18,7 +18,6 @@ class WordAdapter(private val letterId: String, context: Context) :
     private val filteredWords: List<String>
 
     init {
-        // Retrieve the list of words from res/values/arrays.xml
         val words = context.resources.getStringArray(R.array.words).toList()
 
         filteredWords = words
@@ -30,30 +29,22 @@ class WordAdapter(private val letterId: String, context: Context) :
 
     class WordViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val button = view.findViewById<Button>(R.id.button_item)
-
     }
 
     override fun getItemCount(): Int = filteredWords.size
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val layout = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_view, parent, false)
 
-        // Setup custom accessibility delegate to set the text read
         layout.accessibilityDelegate = Accessibility
-
         return WordViewHolder(layout)
     }
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
 
         val item = filteredWords[position]
-
-        // Needed to call startActivity
         val context = holder.view.context
-
-        // Set the text of the WordViewHolder
         holder.button.text = item
 
         holder.button.setOnClickListener {
